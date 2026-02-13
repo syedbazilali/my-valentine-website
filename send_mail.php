@@ -9,26 +9,27 @@ $mail = new PHPMailer(true);
 
 try {
     //Server settings
-    $mail->SMTPDebug = SMTP::DEBUG_SERVER;
+    $mail->SMTPDebug = SMTP::DEBUG_SERVER;  // You can set to 0 to hide debug info
     $mail->isSMTP();
-    $mail->Host       = 'smtp.gmail.com';                       //gmail SMTP server set to send through
+    $mail->Host       = 'smtp.gmail.com';           // Gmail SMTP server
     $mail->SMTPAuth   = true;
-    $mail->Username   = 'user@example.com';                     //SMTP username (your gmail account)
-    $mail->Password   = 'secret';                               //SMTP password (your gmail password or app password)
+    $mail->Username   = 'syedbazilaliazher@gmail.com';  // Your Gmail
+    $mail->Password   = 'xxjofkdqzxjnkkeh';            // Your Gmail App Password
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
     $mail->Port       = 465;
 
     //Recipients
-    $mail->setFrom('from@example.com', 'Mailer');         //Set the sender of the message (your email address)
-    $mail->addAddress('joe@example.net', 'Joe User');     //Add a recipient (your bae's email address)
+    $mail->setFrom('syedbazilaliazher@gmail.com', 'Bazil');  // Sender name
+    $mail->addAddress('irzaamujaddid@gmail.com', 'My Love'); // Recipient
 
     //Content
     $mail->isHTML(true);
-    $mail->Subject = 'I Love You';
-    $mail->Body    = 'Happy Valentine Day My Love. I love you so much. You are the best thing that has ever happened to me ❤';
+    $mail->Subject = 'I Love You Irza ❤️';
+    $mail->Body    = 'Happy Valentine Dayyyyyyyy My Love of the Lifeeeeeee. I love you so much yk. You are the best thing that has ever happened to me and I cant wait to marry you and love you so much with all the resources I would have next valentine day Inn sha ALLAH ❤';
 
     $mail->send();
     echo 'Message has been sent';
 } catch (Exception $e) {
     echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
 }
+
